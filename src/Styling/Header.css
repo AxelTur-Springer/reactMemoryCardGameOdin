@@ -1,0 +1,11 @@
+.HeaderCont{
+    margin: 0px;
+    background-color: black;
+    height: 5em;
+    color: white;
+    text-align: center;
+}
+.HeaderCont h1{
+    margin: 0px;
+
+}

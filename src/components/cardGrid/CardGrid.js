@@ -9,10 +9,14 @@ const [CardComp,SetCardComp] = useState([]);
 
 
 
+
 useEffect(() => {
-    SetCardComp(arrayComp())
-    arrayComp()
-}, [])
+    const loadCard = async()=>{
+        SetCardComp( await arrayComp()) 
+    }
+
+    loadCard()
+  }, [])
 
   
 function arrayComp (){

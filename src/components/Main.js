@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { ReactDOM } from "react";
 import ScoreBoard from "./ScoreBoard/ScoreBoard";
+import CardGrid from "./cardGrid/CardGrid";
 
 export default function Main(){
     const [Obj, setObj] = useState({});
@@ -21,7 +22,7 @@ export default function Main(){
       const ApiDataUrl = `https://restcountries.com/v3.1/all`
       const response = await fetch(ApiDataUrl)
       const responseData = await response.json()
-      for(let i = 0 ; i < 30; i++){
+      for(let i = 0 ; i < 15; i++){
         ApiData.push(responseData[i])
       }
         return ApiData
@@ -31,6 +32,9 @@ export default function Main(){
       <div>
           <div>
                 <ScoreBoard  actualScore = {Score} HighScore = {HighScore}/>             
+          </div>
+          <div>
+            <CardGrid countryObjContainer = {Obj} />
           </div>
       </div>
     );

@@ -1,22 +1,13 @@
 import React from "react";
-import styled from 'styled-components'
 
 export default function ScoreBoard(props){
 
     return (
-        <ScoreBoardWrapper>
+        <div>
                 <p>Score: {props.actualScore}</p>
                 <p>High Score: {props.HighScore}</p>
-        </ScoreBoardWrapper>
+        </div>
     )
 }
-
-const ScoreBoardWrapper = styled.div`
-    display:flex;
-    justify-content: center;
-    flex-direction: row;
-    border: solid red;
-
-`
 
 

@@ -3,12 +3,12 @@ import "./cardGrid.css";
 export default function Card(props){
     
     return(
-        <div className="CardComp">
-            <div>
-                <img src={props.CountryFlag} alt="" />
+        <div className="CardComp" onClick= {props.OnClick}>
+            <div className = "CardImg">
+                <img src={props.CountryImg} alt="" />
             </div>
             <div>
-                <p>Country: {props.CountryName}</p>
+                <p>{props.Country}</p>
             </div>
         </div>
     )

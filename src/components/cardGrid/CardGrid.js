@@ -5,38 +5,17 @@ import Card from "./Card";
 import "./cardGrid.css"
 
 export default function CardGrid(props){
-const [CardComp,SetCardComp] = useState([]);
-
-
-
-
-useEffect(() => {
-    const loadCard = async()=>{
-        SetCardComp( await arrayComp()) 
-    }
-
-    loadCard()
-  }, [])
-
-  
-function arrayComp (){
-    let ComponentArray =[];
-    for(let i = 0 ; i < props.countryObjContainer.length; i++){
-        ComponentArray.push(
-            <Card
-            CountryName ={props.countryObjContainer[i].name.common}
-            CountryFlag = {props.countryObjContainer[i].flags.png}
-            />
-            )          
-    }
-    return ComponentArray
-  }
-
-
+    
+    const CountryCards = props.Countrys.map((Country) => (
+        <Card Country = {Country[0]} 
+              CountryImg = {Country[1]}
+              OnClick = {props.OnClick} />
+      ))
+    
+console.log(CountryCards)
     return(
-        <div className="GridCountrys">   
-      
-        {CardComp}
+        <div className="GridCountrys"> 
+        {CountryCards}
         </div>
     )
 }

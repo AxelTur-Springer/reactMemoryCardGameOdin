@@ -1,8 +1,34 @@
 .GridCountrys{
     display: grid;
-    grid-gap: 5em;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    border: saddlebrown solid ;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
     padding: 0px 1em;
 
+}
+.CardComp{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+border-radius: 5px;
+text-align: center;
+background-color:rgb(255, 255, 255);
+box-shadow: 0px 0px 5px 5px rgba(189, 188, 188, 0.329);
+height: 12em;
+}
+.CardComp:hover{
+    cursor: pointer;
+    animation: test 1s forwards;
+}
+@keyframes test {
+    100%{
+        transform: scale(1.1);
+    }
+}
+.CardImg{
+    display: flex;
+    justify-content: center;
+}
+.CardImg img{
+    border-radius: 5px 5px 0px 0px;
+    width: 100%;
 }

@@ -6,6 +6,7 @@ import ScoreBoard from "./ScoreBoard/ScoreBoard";
 import CardGrid from "./cardGrid/CardGrid";
 import LevelComp from "./cardGrid/LevelSelector";
 import "../Styling/main.css"
+
 export default function Main(){
   const [Countrys, setCountrys] = useState([])
   const [CountrysClicked, setCountrysClicked] = useState([])
@@ -105,7 +106,7 @@ function SelectLevel(e){
           Level ={Level}
           OnClick = {ManageClicks} />
       </div>
-     
+
   </div>
     );
    

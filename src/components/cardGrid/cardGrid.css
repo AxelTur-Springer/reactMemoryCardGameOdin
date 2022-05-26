@@ -1,7 +1,7 @@
 .GridCountrys{
     display: grid;
     grid-gap: 1.5em;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
     padding: 0px 1em;
 
 }
@@ -13,7 +13,7 @@ border-radius: 5px;
 text-align: center;
 background-color:rgb(255, 255, 255);
 box-shadow: 0px 0px 5px 5px rgba(189, 188, 188, 0.329);
-height: 12em;
+height: 11em;
 }
 .CardComp:hover{
     cursor: pointer;
@@ -35,5 +35,16 @@ height: 12em;
 @media only screen and (max-width: 600px) {
     .CardComp:hover{
         animation: none;
+    }
+    .GridCountrys{
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    
+    }
+    .CardComp{
+        justify-content:space-evenly;
+        font-size: 10px;
+        height: 8em;
     }
   }

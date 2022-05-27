@@ -29,7 +29,7 @@ export default function Main(){
     const CountrysUrl = `https://restcountries.com/v3.1/all`
     const response = await fetch(CountrysUrl)
     const CountryData = await response.json()
-    for (let i = 0; i <= Level; i++) {
+    for (let i = 0; i < Level; i++) {
         Countrys.push([CountryData[i].name.common,CountryData[i].flags.svg])
    
     }
@@ -41,7 +41,10 @@ export default function Main(){
     const CountryName = e.currentTarget.innerText
     setCountrysClicked(prev => [...prev, CountryName])
     if(CountrysClicked.includes(CountryName)){
-      setScore(0)
+      setTimeout(() => {
+        setScore(0)
+      }, 2000);
+     
       setCountrysClicked([])
         if(HighScore > Score){
         }else{
@@ -51,7 +54,7 @@ export default function Main(){
         pop[0].style.display = 'flex'
         setTimeout(() => {
           pop[0].style.display = 'none'
-        }, 1000);
+        }, 2000);
       }else{
       setScore(Score + 1)
     }
@@ -86,6 +89,7 @@ function SelectLevel(e){
   else{
     setLevel(20)
   }
+  setCountrysClicked([])
 
 }
     return (
@@ -93,6 +97,8 @@ function SelectLevel(e){
          <div className = 'popUpWinOrLose'>
            <div className = "Content">
             <p>Oh oh you lost</p>
+            <p>Your Score {Score}</p>
+            <p>High Score {HighScore}</p>
            </div>
          </div>
          <div>
